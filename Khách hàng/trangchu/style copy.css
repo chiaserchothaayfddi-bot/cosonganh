@@ -55,7 +55,6 @@ main {
     display: block;
     height: max-content;
     align-items: center;
-    justify-content: center;
 }
 
 .container {
@@ -151,15 +150,12 @@ footer {
     display: flex;
     align-items: center;
     color: white;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo {
     display: flex;
     color: white;
     margin: 20px;
-    margin-right:50px;
 }
 
 .logo img {
