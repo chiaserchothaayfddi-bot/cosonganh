@@ -20,11 +20,40 @@
   </header>
   <main>
     <div class="container">
-      <!-- Nút đăng nhập, đăng ký -->
-      <div class="auth">
-        <div class="auth-content">
-          <a class="signup" id="headerRegister" href="javascript:void(0)">Đăng ký</a>|
-          <a class="login" id="headerLogin" href="javascript:void(0)">Đăng nhập</a>
+      <!-- nút cập nhật thông tin -->
+      <div class="user-menu">
+        <button class="update-btn" id="updateBtn">👤 Cập nhật thông tin</button>
+        <div class="dropdown">
+          <a href="../trangchupre/trangchu.html"><button id="logoutBtn">↩️ Đăng xuất</button></a>
+        </div>
+      </div>
+
+      <!-- Overlay Form -->
+      <div class="overlay" id="overlay">
+        <div class="form-container">
+          <h2>Cập nhật thông tin</h2>
+          <form id="infoForm">
+            <input type="text" placeholder="Họ và tên (Bắt buộc)" required>
+            <input type="tel" placeholder="Số điện thoại">
+            <input type="date" placeholder="Ngày sinh">
+            <div class="gender">
+              <label><input type="radio" name="gender"> Nam</label>
+              <label><input type="radio" name="gender"> Nữ</label>
+            </div>
+
+            <input type="text" placeholder="CCCD hoặc mã định danh">
+            <select>
+              <option>Việt Nam</option>
+            </select>
+            <input type="text" placeholder="Tỉnh/Thành phố">
+            <input type="text" placeholder="Xã/Phường">
+            <input type="text" placeholder="Địa chỉ cụ thể">
+
+            <div class="actions">
+              <button type="button" class="cancel-btn" id="cancelBtn">Hủy</button>
+              <button type="submit" class="save-btn">Lưu</button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -34,7 +63,7 @@
         </h2>
       </div>
       <div class="features">
-        <a id="btnDatLich" href="javascript:void(0)">
+        <a id="btnDatLich" href="../datlichkham/order.html">
           <div class="feature-box">
             <img src="../Picture/doctor.png" alt="calendar">
             <div>
@@ -52,80 +81,6 @@
             </div>
           </div>
         </a>
-        <!-- Modal -->
-        <div class="modal" id="modalAuth">
-          <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-
-            <!-- Form đăng nhập -->
-            <div id="formLogin">
-              <h2>Đăng nhập</h2>
-              <div class="form-group">
-                <label>Số điện thoại</label>
-                <input type="number" placeholder="Nhập số điện thoại">
-              </div>
-              <div class="form-group">
-                <label>Mật khẩu</label>
-                <input type="password" placeholder="Nhập mật khẩu">
-              </div>
-              <a href="..//trangchu/trangchu.html"><button class="submit-btn">Đăng nhập</button></a>
-              <div class="switch">
-                Chưa có tài khoản? <a id="switchToRegister">Đăng ký</a>
-              </div>
-            </div>
-
-            <!-- Form đăng ký -->
-            <div id="formRegister" style="display:none;">
-              <h2>Đăng ký</h2>
-
-              <div class="form-group">
-                <label>Họ và tên</label>
-                <input type="text" placeholder="Nhập họ và tên">
-              </div>
-
-              <div class="form-group">
-                <label>Số điện thoại</label>
-                <input type="text" placeholder="Nhập số điện thoại">
-              </div>
-
-              <div class="form-group">
-                <label>Giới tính</label>
-                <select>
-                  <option value="">-- Chọn giới tính --</option>
-                  <option value="Nam">Nam</option>
-                  <option value="Nữ">Nữ</option>
-                  <option value="Khác">Khác</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Ngày sinh</label>
-                <input type="date">
-              </div>
-
-              <div class="form-group">
-                <label>CCCD</label>
-                <input type="text" placeholder="Nhập số CCCD">
-              </div>
-
-              <div class="form-group">
-                <label>Địa chỉ</label>
-                <input type="text" placeholder="Nhập địa chỉ cư trú">
-              </div>
-
-              <div class="form-group">
-                <label>Mật khẩu</label>
-                <input type="password" placeholder="Tạo mật khẩu">
-              </div>
-
-              <button class="submit-btn">Đăng ký</button>
-              <div class="switch">
-                Đã có tài khoản? <a id="switchToLogin">Đăng nhập</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
         <div class="illustration">
           <img src="../Picture/Screenshot 2025-10-05 160850.png" alt="Doctors">
         </div>

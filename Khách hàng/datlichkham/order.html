@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Đặt lịch khám - Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header / hero -->
+  <header>
+    <a href="../trangchu/trangchu.html">
+      <img src="../Picture/logo1.png" alt="">
+    </a>
+    <p class="hotline">HOTLINE: <span style="color: red;">1900 6422</span></p>
+  </header>
+
+  <div class="booking-box">
+    <h2 style="text-align:center; color:#1e3a8a;">Đặt lịch khám</h2>
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" placeholder="Họ và tên người bệnh">
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Lý do đến khám / Triệu chứng">
+      </div>
+    </div>
+    
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" placeholder="Tìm theo tên bác sĩ">
+      </div>
+      <div class="input-box">
+        <input type="text" id="khoaInput" placeholder="Chọn khoa" readonly>
+        <div class="dropdown" id="dropdownKhoa">
+          <div class="dropdown-item" onclick="chonKhoa('Khoa Da liễu và Dị ứng - Miễn dịch lâm sàng')">
+            <h4>Khoa Da liễu và Dị ứng - Miễn dịch lâm sàng</h4>
+            <p>Tầng 3 nhà A5, Số 1 Tôn Thất Tùng</p>
+          </div>
+          <div class="dropdown-item" onclick="chonKhoa('Khoa Khám bệnh')">
+            <h4>Khoa Khám bệnh</h4>
+            <p>Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội</p>
+          </div>
+          <div class="dropdown-item" onclick="chonKhoa('Khoa Khám bệnh - Cơ sở Hoàng Mai')">
+            <h4>Khoa Khám bệnh - Cơ sở Hoàng Mai</h4>
+            <p>Ngõ 587 Tam Trinh, Yên Sở, Hoàng Mai, Hà Nội</p>
+          </div>
+          <div class="dropdown-item" onclick="chonKhoa('Khoa khám chữa bệnh theo yêu cầu')">
+            <h4>Khoa khám chữa bệnh theo yêu cầu</h4>
+            <p>Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội</p>
+          </div>
+          <div class="dropdown-item" onclick="chonKhoa('Phòng khám đa khoa - Cơ sở Cầu Giấy')">
+            <h4>Phòng khám đa khoa - Cơ sở Cầu Giấy</h4>
+            <p>Số 10, Trương Công Giai, Cầu Giấy, Hà Nội</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   </div>
+
+    <!-- content -->
+    <main class="content">
+      <div class="date-range">Ngày 11 Tháng 10 Năm 2025 – Ngày 10 Tháng 11 Năm 2025</div>
+
+      <!-- Doctor 1 -->
+      <article class="doctor-card" data-id="1">
+        <div class="doctor-header">
+          <div class="avatar"><img src="../Picture/doctor.png" alt="avatar"></div>
+          <div class="meta" style="min-width:0">
+            <div class="name">PGSTS. Trần Ngọc Ánh</div>
+            <div class="spec">🩺 Tiêu hóa &nbsp; | &nbsp; <span style="color:#999">PGS.TS</span></div>
+          </div>
+          <div class="price">350.000đ</div>
+
+          <button class="arrow-btn" title="Xem lịch" aria-expanded="false">
+            <!-- arrow-icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:block">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="details" aria-hidden="true">
+          <div class="details-inner">
+            <div class="days">
+              <div class="day-card selected">
+                <div class="weekday">Thứ 2</div>
+                <div class="date">13/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 3</div>
+                <div class="date">14/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 4</div>
+                <div class="date">15/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 5</div>
+                <div class="date">16/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 6</div>
+                <div class="date">17/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 7</div>
+                <div class="date">18/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 4</div>
+                <div class="date">22/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 4</div>
+                <div class="date">29/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 4</div>
+                <div class="date">05/11</div>
+              </div>
+            </div>
+
+            <div class="clinic">
+              <div class="clinic-icon">🏥</div>
+              <div class="clinic-info">
+                <div class="title">Trung tâm Y khoa số 1 Tôn Thất Tùng</div>
+                <div class="addr">Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội</div>
+
+                <div class="service">
+                  <div class="srv-name">Phòng khám Tiêu hóa 205 &nbsp; • &nbsp; Dịch vụ: Khám Nội [PK1]</div>
+                  <div class="srv-price">350.000đ</div>
+                </div>
+
+                <div class="times">
+                  <button class="time-btn">07:45</button>
+                  <button class="time-btn">08:00</button>
+                  <button class="time-btn">08:15</button>
+                  <button class="time-btn">08:30</button>
+                  <button class="time-btn">08:45</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Doctor 2 -->
+      <article class="doctor-card" data-id="2">
+        <div class="doctor-header">
+          <div class="avatar"><img src="../Picture/doctor.png" alt="avatar"></div>
+          <div class="meta">
+            <div class="name">PGSTS. Nguyễn Văn Hưởng</div>
+            <div class="spec">🩺 Nội thần kinh</div>
+          </div>
+          <div class="price">120.000đ</div>
+
+          <button class="arrow-btn" title="Xem lịch" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:block">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="details" aria-hidden="true">
+          <div class="details-inner">
+            <div class="days">
+              <div class="day-card selected">
+                <div class="weekday">Thứ 3</div>
+                <div class="date">14/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 4</div>
+                <div class="date">15/10</div>
+              </div>
+              <div class="day-card">
+                <div class="weekday">Thứ 5</div>
+                <div class="date">16/10</div>
+              </div>
+            </div>
+
+            <div class="clinic">
+              <div class="clinic-icon">🏥</div>
+              <div class="clinic-info">
+                <div class="title">Phòng khám Nội Thần kinh 101</div>
+                <div class="addr">Tầng 2 - Tòa nhà A</div>
+
+                <div class="service">
+                  <div class="srv-name">Khám chuyên khoa - Nội thần kinh</div>
+                  <div class="srv-price">120.000đ</div>
+                </div>
+
+                <div class="times">
+                  <button class="time-btn">09:00</button>
+                  <button class="time-btn">09:15</button>
+                  <button class="time-btn">09:30</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
