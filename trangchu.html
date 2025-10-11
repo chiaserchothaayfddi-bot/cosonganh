@@ -23,7 +23,6 @@
   </header>
   <main>
     <div class="container">
-      <!-- Nút đăng nhập, đăng ký -->
       <div class="auth">
         <a class="signup" id="headerRegister" href="javascript:void(0)">Đăng ký</a>
         <a class="login" id="headerLogin" href="javascript:void(0)">Đăng nhập</a>
@@ -61,20 +60,12 @@
             <div id="formLogin">
               <h2>Đăng nhập</h2>
               <div class="form-group">
-                <label>Họ và tên</label>
-                <input type="text" placeholder="Nhập họ và tên">
-              </div>
-              <div class="form-group">
                 <label>Số điện thoại</label>
-                <input type="number" placeholder="Nhập số điện thoại">
+                <input type="text" placeholder="Nhập số điện thoại">
               </div>
               <div class="form-group">
                 <label>Mật khẩu</label>
                 <input type="password" placeholder="Nhập mật khẩu">
-              </div>
-              <div class="form-group">
-                <label>Giới tính</label>
-                <input type="option" placeholder="Nhập số điện thoại">
               </div>
               <button class="submit-btn">Đăng nhập</button>
               <div class="switch">
@@ -85,25 +76,97 @@
             <!-- Form đăng ký -->
             <div id="formRegister" style="display:none;">
               <h2>Đăng ký</h2>
+
+              <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" placeholder="Nhập họ và tên">
+              </div>
+
               <div class="form-group">
                 <label>Số điện thoại</label>
                 <input type="text" placeholder="Nhập số điện thoại">
               </div>
+
+              <div class="form-group">
+                <label>Giới tính</label>
+                <select>
+                  <option value="">-- Chọn giới tính --</option>
+                  <option value="Nam">Nam</option>
+                  <option value="Nữ">Nữ</option>
+                  <option value="Khác">Khác</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Ngày sinh</label>
+                <input type="date">
+              </div>
+
+              <div class="form-group">
+                <label>CCCD</label>
+                <input type="text" placeholder="Nhập số CCCD">
+              </div>
+
+              <div class="form-group">
+                <label>Địa chỉ</label>
+                <input type="text" placeholder="Nhập địa chỉ cư trú">
+              </div>
+
               <div class="form-group">
                 <label>Mật khẩu</label>
                 <input type="password" placeholder="Tạo mật khẩu">
               </div>
+
               <button class="submit-btn">Đăng ký</button>
               <div class="switch">
                 Đã có tài khoản? <a id="switchToLogin">Đăng nhập</a>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="illustration">
-          <img src="Screenshot 2025-10-05 160850.png" alt="Doctors">
-        </div>
+
       </div>
+            <!-- Modal đặt lịch khám -->
+            <div class="modal" id="modalBooking">
+              <div class="modal-content booking">
+                <span class="close" id="closeBooking">&times;</span>
+                <h2>Đặt lịch khám</h2>
+
+                <div class="form-group">
+                  <label>Họ và tên</label>
+                  <input type="text" placeholder="Nhập họ tên bệnh nhân">
+                </div>
+
+                <div class="form-group">
+                  <label>Lý do khám</label>
+                  <textarea placeholder="Nhập lý do khám..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Chọn khoa khám</label>
+                  <select id="selectKhoa">
+                    <option value="">-- Chọn khoa --</option>
+                    <option value="noi">Khoa Nội</option>
+                    <option value="ngoai">Khoa Ngoại</option>
+                    <option value="nhi">Khoa Nhi</option>
+                    <option value="mat">Khoa Mắt</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="groupBacSi" style="display:none;">
+                  <label>Chọn bác sĩ</label>
+                  <select id="selectBacSi">
+                    <option value="">-- Chọn bác sĩ --</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Chọn thời gian khám</label>
+                  <input type="date" id="ngayKham">
+                  <input type="time" id="gioKham">
+                </div>
+
+                <button class="submit-btn">Gửi thông tin đặt lịch</button>
+              </div>
+            </div>
 
     </div>
   </main>
@@ -144,7 +207,7 @@
   <button id="chatBtn"> <img src="icon.png" alt="Chat"> <span>Chat với ICare</span> </button>
   <!-- Hộp chat -->
   <div id="chatWindow">
-    <div class="chat-header">
+    <div class="chat-header"> 
       <img src="icon.png" alt=""><span>ICare Assitant</span> <span id="closeChat">&times;</span>
     </div>
     <div class="chat-body" id="chatBody">
@@ -154,7 +217,6 @@
         id="sendBtn">Gửi</button> </div>
   </div>
 
-  
   <script>
     const chatBtn = document.getElementById("chatBtn");
     const chatWindow = document.getElementById("chatWindow");
@@ -175,13 +237,11 @@
       chatBody.appendChild(userMsg);
       userInput.value = "";
       chatBody.scrollTop = chatBody.scrollHeight;
-
       setTimeout(() => {
         const botMsg = document.createElement("div");
         botMsg.className = "chat-message bot";
         botMsg.textContent = "ICare: Tôi đã nhận được tin nhắn của bạn!";
-        chatBody.appendChild(botMsg);
-        chatBody.scrollTop = chatBody.scrollHeight;
+        chatBody.appendChild(botMsg); chatBody.scrollTop = chatBody.scrollHeight;
       }, 600);
     }
     const modal = document.getElementById("modalAuth");
