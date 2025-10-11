@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="jv.js">
+
+</head>
+
+<body>
+  <header>
+    <a href="trangchu.html">
+      <img src="../Picture/logo1.png" alt="">
+    </a>
+    <p class="hotline">HOTLINE: <span style="color: red;">1900 6422</span></p>
+  </header>
+  <main>
+    <div class="container">
+      <!-- Nút đăng nhập, đăng ký -->
+      <div class="auth">
+        <a class="signup" id="headerRegister" href="javascript:void(0)">Đăng ký</a>
+        <a class="login" id="headerLogin" href="javascript:void(0)">Đăng nhập</a>
+      </div>
+      <div class="intro">
+        <h1>Đặt lịch và xem kết quả khám online</h1>
+        <h2>Giờ đây bạn có thể đặt lịch trước khi tới khám và xem được kết quả khám online nhanh chóng mọi lúc mọi nơi
+        </h2>
+      </div>
+      <div class="features">
+        <a id="btnDatLich" href="javascript:void(0)">
+          <div class="feature-box">
+            <img src="../Picture/doctor.png" alt="calendar">
+            <div>
+              <h3>Đặt lịch khám</h3>
+              <p>Đặt lịch khám online trước khi tới viện</p>
+            </div>
+          </div>
+        </a>
+        <a id="btnHoSo" href="javascript:void(0)">
+          <div class="feature-box">
+            <img src="../Picture/file.png" alt="record">
+            <div>
+              <h3>Hồ sơ y tế</h3>
+              <p>Xem và lưu trữ kết quả khám</p>
+            </div>
+          </div>
+        </a>
+        <!-- Modal -->
+        <div class="modal" id="modalAuth">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+
+            <!-- Form đăng nhập -->
+            <div id="formLogin">
+              <h2>Đăng nhập</h2>
+              <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" placeholder="Nhập họ và tên">
+              </div>
+              <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="number" placeholder="Nhập số điện thoại">
+              </div>
+              <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" placeholder="Nhập mật khẩu">
+              </div>
+              <div class="form-group">
+                <label>Giới tính</label>
+                <input type="option" placeholder="Nhập số điện thoại">
+              </div>
+              <button class="submit-btn">Đăng nhập</button>
+              <div class="switch">
+                Chưa có tài khoản? <a id="switchToRegister">Đăng ký</a>
+              </div>
+            </div>
+
+            <!-- Form đăng ký -->
+            <div id="formRegister" style="display:none;">
+              <h2>Đăng ký</h2>
+
+              <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" placeholder="Nhập họ và tên">
+              </div>
+
+              <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" placeholder="Nhập số điện thoại">
+              </div>
+
+              <div class="form-group">
+                <label>Giới tính</label>
+                <select>
+                  <option value="">-- Chọn giới tính --</option>
+                  <option value="Nam">Nam</option>
+                  <option value="Nữ">Nữ</option>
+                  <option value="Khác">Khác</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Ngày sinh</label>
+                <input type="date">
+              </div>
+
+              <div class="form-group">
+                <label>CCCD</label>
+                <input type="text" placeholder="Nhập số CCCD">
+              </div>
+
+              <div class="form-group">
+                <label>Địa chỉ</label>
+                <input type="text" placeholder="Nhập địa chỉ cư trú">
+              </div>
+
+              <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" placeholder="Tạo mật khẩu">
+              </div>
+
+              <button class="submit-btn">Đăng ký</button>
+              <div class="switch">
+                Đã có tài khoản? <a  id="switchToLogin">Đăng nhập</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="illustration">
+          <img src="../Picture/Screenshot 2025-10-05 160850.png" alt="Doctors">
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="logo">
+      <img src="../Picture/logo2.png" alt="">
+    </div>
+    <div class="location">
+      <p style="font-weight: bold;font-size: 18px;">BỆNH VIỆN ĐA KHOA QUỐC TẾ ICARE</p>
+      <div class="location-content">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>Cơ sở Tôn Thất Tùng: <span>Số 1 Tôn Thất Tùng, Phường Trung Tự, Quận Đống Đa, Hà Nội</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>Cơ sở Cầu Giấy: <span>Số 10 Trương Công Giai, Cầu Giấy, Hà Nội</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>Cơ sở Hoàng Mai: <span>Số 587, Tam Trinh, Yên Sở, Hoàng Mai, Hà Nội</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <p>Email: <span>icare@hospital.vn</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <p>Tổng đài: <span>1900 6422</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nút chatbot -->
+  <button id="chatBtn"> <img src="../Picture/icon.png" alt="Chat"> <span>Chat với ICare</span> </button>
+  <!-- Hộp chat -->
+  <div id="chatWindow">
+    <div class="chat-header">
+      <img src="../Picture/icon.png" alt=""><span>ICare Assitant</span> <span id="closeChat">&times;</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot">Xin chào! Tôi là trợ lý ICare 🤖</div>
+    </div>
+    <div class="chat-input"> <input type="text" id="userInput" placeholder="Nhập tin nhắn..."> <button
+        id="sendBtn">Gửi</button> </div>
+  </div>
+
+  
+
+
+</body>
+
+</html>
