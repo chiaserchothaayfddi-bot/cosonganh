@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem Hồ Sơ Sức Khỏe</title>
+  <link rel="stylesheet" href="hosoyte.css">
+</head>
+<body>
+    <header>
+    <a href="../trangchu/trangchu.html">
+      <img src="../Picture/logo1.png" alt="">
+    </a>
+    <p class="hotline">HOTLINE: <span style="color: red;">1900 6422</span></p>
+  </header>
+
+
+  <div class="header">
+    <h1>🩺 Hồ sơ sức khỏe điện tử</h1>
+  </div>
+
+
+
+  <section class="profile-card" id="patientCard">
+    <h2>Thông tin bệnh nhân</h2>
+    <p><strong>Họ và tên:</strong> <span id="name">Nguyễn Văn A</span></p>
+    <p><strong>Giới tính:</strong> <span id="gender">Nam</span></p>
+    <p><strong>Ngày sinh:</strong> <span id="dob">12/04/1985</span></p>
+    <p><strong>Mã hồ sơ:</strong> <span id="recordId">HS123456</span></p>
+  </section>
+
+  <section class="record-list">
+    <h2>Lịch sử khám bệnh</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Ngày khám</th>
+          <th>Bác sĩ</th>
+          <th>Khoa</th>
+          <th>Kết luận</th>
+        </tr>
+      </thead>
+      <tbody id="recordTable">
+        <tr onclick="showDetail('Khám tổng quát, huyết áp bình thường')">
+          <td>10/10/2025</td>
+          <td>PGS.TS. Trần Ngọc Ánh</td>
+          <td>Nội tiết</td>
+          <td>Ổn định</td>
+        </tr>
+        <tr onclick="showDetail('Chẩn đoán viêm họng nhẹ, kê thuốc kháng sinh 5 ngày')">
+          <td>22/09/2025</td>
+          <td>BS. Nguyễn Văn Hưng</td>
+          <td>Hô hấp</td>
+          <td>Viêm họng</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="detail-box" id="detailBox">
+    <h3>Chi tiết kết quả khám</h3>
+    <p id="detailText">Bấm vào một dòng trong bảng để xem chi tiết kết quả.</p>
+  </section>
+      <footer>
+    <div class="logo">
+      <img src="../Picture/logo2.png" alt="">
+    </div>
+    <div class="location">
+      <p style="font-weight: bold;font-size: 18px;">BỆNH VIỆN ĐA KHOA QUỐC TẾ ICARE</p>
+      <div class="location-content">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>Cơ sở Tôn Thất Tùng: <span>Số 1 Tôn Thất Tùng, Phường Trung Tự, Quận Đống Đa, Hà Nội</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>Cơ sở Cầu Giấy: <span>Số 10 Trương Công Giai, Cầu Giấy, Hà Nội</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>Cơ sở Hoàng Mai: <span>Số 587, Tam Trinh, Yên Sở, Hoàng Mai, Hà Nội</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <p>Email: <span>icare@hospital.vn</span></p>
+      </div>
+      <div class="location-content">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <p>Tổng đài: <span>1900 6422</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="hosoyte.js"></script>
+</body>
+</html>
