@@ -418,3 +418,44 @@
      font-size: 13px;
      color: #6b7280;
  }
+
+ footer {
+    width: 100%;
+    height: max-content;
+    background-color: #363946;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 300px;
+    height: 70px;
+}
+
+.location {
+    margin-left: 50px;
+    width: fit-content;
+    display: inline-block;
+    line-height: 10px;
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+}
+
+.location-content p {
+    color: rgb(203, 201, 201);
+}
+
+.location-content i {
+    margin-right: 5px;
+}
+
+.location-content span {
+    color: white;
+}
