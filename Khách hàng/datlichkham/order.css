@@ -281,7 +281,7 @@
 
  .day-card.selected {
      background: var(--blue-600);
-     color: #fff;
+     color: #000000;
      box-shadow: none
  }
 
